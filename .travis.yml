@@ -9,6 +9,5 @@ deploy:
 		secure: KwzH6O24wikLw4R4J5MzWtEfzHhUhmBWcEOznH9ZAhmq5uxp7+MTtxHAK8rzIaojAsxMNUnxvrP7qvSf5gIxtIAKr3vFvqRA2zNVwzVHO/kvyG9y8DNzK8pWjYJJFMH1IC+3sVGy3FDn9z/8h2HQpwuWyL3K8i3ZWh/75z5qIHk=
 	app: sleepy-forest-7490
 	run:
-		#remember that migrations you run locally must run in the release environment
 		- "rake db:migrate"
 		- restart
