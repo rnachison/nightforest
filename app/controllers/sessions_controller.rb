@@ -4,14 +4,14 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user = User.where(email: params[:email]).first
+        user = User.where(username: params[:username]).first
         # make sure there's a current user and they authenticate
         if user && user.authenticate(params[:password])
             # sets the cookie to the browser
             session[:user_id] = user.id
             redirect_to root_url
         else
-            flash.now.alert = "Email or password is invalid"
+            flash.now.alert = "Username or password is invalid"
             render "new"
         end
     end
