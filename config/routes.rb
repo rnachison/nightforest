@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  root 'forest_floor#index'
+
+  get 'forest_floor/asteroids' => 'forest_floor#asteroids', as: :asteroids
+
+  get 'night_sky/exoplanets' => 'night_sky#exoplanets', as: :exoplanets
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
