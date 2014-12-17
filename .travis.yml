@@ -4,11 +4,11 @@ rvm:
 before_script:
 - psql -c 'create database travis_ci_test;' -U postgres
 deploy:
-  provider: heroku
-  api_key:
-    secure: k0CtcgzHvDW/4Bi38x05utgHQT3fJfIfnm/jJqqJE+8oNuY0kCdP8pfzil7NPVwvFJ2vKOyVVfYBllTAolok52/ERcU4RYTns580yubwSPrsJE/omCvRZ+AAdnJSU5cs9uYP2c2k/n9MqkrXRXB48tL97MKZpEnghn4vMD1iluk=
-app: sleepy-forest-7490
-run:
-    #remember that migrations you run locally must run in the release environment
-    - "rake db:migrate"
-    - restart
+	provider: heroku
+	api_key:
+		secure: KwzH6O24wikLw4R4J5MzWtEfzHhUhmBWcEOznH9ZAhmq5uxp7+MTtxHAK8rzIaojAsxMNUnxvrP7qvSf5gIxtIAKr3vFvqRA2zNVwzVHO/kvyG9y8DNzK8pWjYJJFMH1IC+3sVGy3FDn9z/8h2HQpwuWyL3K8i3ZWh/75z5qIHk=
+	app: sleepy-forest-7490
+	run:
+		#remember that migrations you run locally must run in the release environment
+		- "rake db:migrate"
+		- restart
