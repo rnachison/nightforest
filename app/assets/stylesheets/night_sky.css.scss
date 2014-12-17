@@ -1,7 +1,7 @@
 // style night_sky/ page
 
 $violet: rgb(255, 15, 255);
-$turquoise: rgba(2, 178, 152, .5);
+$teal: rgba(0, 108, 127, .7);
 
 #sky {
 
@@ -16,17 +16,25 @@ $turquoise: rgba(2, 178, 152, .5);
 
 		height: 10%;
 		width: 50%;
-		background-color: $turquoise;
-		margin: 0px auto;
+		background-color: $teal;
+		margin: 18% auto 0% auto;
 		border-radius: 20px;
+		border: 2px solid $violet;
 
 		// "Find A New Home"
-		h1#home_world {
+		.home_world {
 
 			color: $violet;
 			text-align: center;
 
 		}
+
+	}
+
+	#sky_bar {
+
+		background-color: $teal;
+		border: 2px solid $violet;
 
 	}
 
