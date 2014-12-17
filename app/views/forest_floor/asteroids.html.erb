@@ -1,0 +1,126 @@
+<body id="asteroids">
+
+<svg height="800" width="1500">
+</svg>
+
+<script type="text/javascript">
+	
+
+        // size of d3 window
+        var width = 1500,
+            height = 800;
+
+        var dataset = [];
+        <% @fireflies.each do |x| %>
+        	dataset.push(<%= x['diameter'] %> / 5);
+        <% end %>
+        console.log(dataset);
+
+        // number of fireflies, length of radii = semi-major axis in au
+        var nodes = d3.range(729).map(function(d, i) { return {radius: dataset[i]}; }),
+            // set root node
+            root = nodes[0];
+            // color of fireflies 
+        var color = d3.rgb(255, 25, 255);
+
+        // root node radius = 0
+        root.radius = 0;
+        // root node is fixed -- allows other nodes to react around root
+        root.fixed = true;
+
+        var force = d3.layout.force()
+            // fireflies repel each other, move away from cursor
+            .charge(function(d, i) { return i ? (Math.random() * -150) : -2250; })
+            // use nodes array instead of current empty array
+            .nodes(nodes)
+            // link between fireflies is weak
+            .linkStrength(0.001)
+            // spread over d3 window
+            .size([width, height])
+            .alpha(2)
+            // fire force
+            .start();
+
+        // select the svg window
+        var svg = d3.select("svg");
+
+        // select all circles
+        svg.selectAll("circle")
+            // use nodes array to create circles
+            .data(nodes)
+            // create circles
+            .enter().append("circle")
+            // assign circle radius based on nodes array
+            .attr("r", function(d) { return d.radius;})
+            // assign color
+            .style("fill", function(d, i) { return color; });
+
+        // do for each tick of the quadtree
+        force.on("tick", function(e) {
+            // creates new quadtree for array nodes
+            var q = d3.geom.quadtree(nodes),
+                i = 0,
+                n = nodes.length;
+            // loop through nodes, collide function on each
+            while (++i < n) q.visit(collide(nodes[i]));
+
+        // select all circles, assign their positions to the node x and y coordinates
+        svg.selectAll("circle")
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+        });
+
+        // on mousemove 
+        svg.on("mousemove", function() {
+            // mouse position array
+            var p1 = d3.mouse(this);
+            // previous node x-coordinate becomes x-coordinate
+            root.px = p1[0];
+            // previous node y-coordinate becomes y-coordinate
+            root.py = p1[1];
+            // restarts force
+            force.resume();
+        });
+
+        // resolve collisions between node and other circles
+        function collide(node) {
+            var r = node.radius ,
+                nx1 = node.x - r,
+                nx2 = node.x + r,
+                ny1 = node.y - r,
+                ny2 = node.y + r;
+            return function(quad, x1, y1, x2, y2) {
+                // if at a point in the quad, and it's not the node itself
+                if (quad.point && (quad.point !== node)) {
+                        // x is equal to the difference between the node and point's x-coordinates
+                    var x = node.x - quad.point.x,
+                        // y is equal to the difference between the node and point's y-coordinates
+                        y = node.y - quad.point.y,
+                        // l is the cartesian distance between x and y
+                        l = Math.sqrt(x * x + y * y),
+                        // r is equal to the sum of both radii
+                        r = node.radius + quad.point.radius;
+                    // if the distance between x and y is less than the radii combined
+                    if (l < r) {
+                        // set l equal to their difference divided by half the distance
+                        l = (l - r) / l * .5;
+                        node.x -= x *= l;
+                        node.y -= y *= l;
+                        quad.point.x += x;
+                        quad.point.y += y;
+                    }
+                }
+
+                return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+            };
+
+        };
+
+
+
+
+</script>
+
+
+
+</body>
