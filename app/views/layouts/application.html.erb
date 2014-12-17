@@ -14,8 +14,10 @@
 
         <div id="container">
 			<div id="user_header">
-			    <% if current_user %>
-			      <%= current_user.username %>.
+        		<% if current_user %>
+            	<%= link_to(current_user, html_options = {class: "user_links"}) do %>
+                	<%= current_user.username %>'s Page
+            	<% end %>
 			      <%= link_to "Log Out", logout_path %>
 			    <% else %>
 			      <%= link_to "Sign Up", signup_path %> or
