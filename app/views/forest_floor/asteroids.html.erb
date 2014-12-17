@@ -35,18 +35,24 @@
         var width = 1500,
             height = 800;
 
+        // create empty array for radii
         var dataset = [];
+        // push a radius for each asteroid
         <% @fireflies.each do |x| %>
         	dataset.push(<%= x['diameter'] %> / 5);
         <% end %>
-        console.log(dataset);
+        // console.log(dataset);
 
-        // number of fireflies, length of radii = semi-major axis in au
+        // number of fireflies, length of radii = diameter in km
         var nodes = d3.range(729).map(function(d, i) { return {radius: dataset[i]}; }),
             // set root node
             root = nodes[0];
-            // color of fireflies 
-        var color = d3.rgb(255, 25, 255);
+        // create empty array for color
+        var color = [];
+        // push a color with brightness and opacity based on inverse magnitude
+        <% @fireflies.each do |x| %>
+            color.push("rgba(255, 248," + parseInt(400 / <%= x['H'] %>) + "," + 8 / <%= x['H'] %> + ")");
+        <% end %>
 
         // root node radius = 0
         root.radius = 0;
@@ -78,7 +84,7 @@
             // assign circle radius based on nodes array
             .attr("r", function(d) { return d.radius;})
             // assign color
-            .style("fill", function(d, i) { return color; });
+            .style("fill", function(d, i) { return color[i]; });
 
         // do for each tick of the quadtree
         force.on("tick", function(e) {
