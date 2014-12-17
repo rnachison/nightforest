@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'forest_floor/asteroids' => 'forest_floor#asteroids', as: :asteroids
 
+  get 'night_sky/' => 'night_sky#index', as: :sky
+
   get 'night_sky/exoplanets' => 'night_sky#exoplanets', as: :exoplanets
 
 

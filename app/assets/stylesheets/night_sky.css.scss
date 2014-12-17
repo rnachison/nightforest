@@ -1,0 +1,44 @@
+// style night_sky/ page
+
+$violet: rgb(255, 15, 255);
+$turquoise: rgba(2, 178, 152, .5);
+
+#sky {
+
+	height: 100%;
+	width: 100%;
+	background-image: url(image_path('space_purple.jpg'));
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	// div around headline
+	#sky_head {
+
+		height: 10%;
+		width: 50%;
+		background-color: $turquoise;
+		margin: 0px auto;
+		border-radius: 20px;
+
+		// "Find A New Home"
+		h1#home_world {
+
+			color: $violet;
+			text-align: center;
+
+		}
+
+	}
+
+}
+
+#exoplanets {
+
+	height: 100%;
+	width: 100%;
+	background-image: url(image_path('space_purple.jpg'));
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+}
