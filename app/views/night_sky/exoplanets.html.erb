@@ -33,17 +33,19 @@
         var year = [];
         // push orbital period absolute value into year
         <% @exo.each do |x| %>
+            // every second is one Earth year
             year.push(Math.abs(<%= x['PER'] %>) * 1000);
         <% end %>
 
         console.log(year);
 
+        // Make an array of indices to assign to planet ids
         var planetNum = [];
         <% @exo.each_index do |z| %>
             planetNum.push(<%= z %>);
         <% end %>
 
-        console.log(planetNum);
+        // console.log(planetNum);
 
 
 
@@ -77,12 +79,13 @@
                 return "planet" + i;
             });
 
-
+        // for each planet index
         planetNum.forEach(function(z){
 
-
+        // create a unique interval
         setInterval(function(d, i){
 
+            // select each planet id individually
             svg.select("#planet" + z).attr("fill", function(d, i){
                 return "hsl(" + Math.random() * 360 + ",100%,50%)";
             });
