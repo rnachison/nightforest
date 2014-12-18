@@ -5,7 +5,7 @@
 		<svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" height="700" width="1500">
     		<a xlink:href="http://solarsystem.nasa.gov/planets/profile.cfm?Object=Comets" id="comet_link">
-        	<rect x="400" y="300" width="75" height="30" style="stroke: #333366; fill: #6666cc" />
+        	<text id="hoverText" x="400" y="300" style="display: none;">Find out more</text>
     		</a>
 
 		</svg>
@@ -39,6 +39,7 @@
 	</div>
 
 	<script type="text/javascript">
+
 
 
         // size of d3 window
@@ -146,6 +147,10 @@
             };
 
         };
+
+        svg
+	    .on("mouseover", function() { document.getElementById('hoverText').style.display = null; })
+      	.on("mouseout", function() { document.getElementById('hoverText').style.display = "none"; });
 
 	</script>
 
