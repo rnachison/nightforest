@@ -6,6 +6,8 @@ $comets: rgb(255, 13, 255);
 $exoplanets: rgb(232, 12, 122);
 $rockets: rgb(0, 255, 127);
 $asteroids: rgb(220, 165, 255);
+$script: 'Bilbo Swash Caps', cursive;
+$blockier: 'Marck Script', cursive;
 
 
 #user_page {
@@ -16,6 +18,13 @@ $asteroids: rgb(220, 165, 255);
 	background-size: cover;
 	background-repeat: no-repeat;
 
+
+	#fairy_window {
+
+		position: absolute;
+
+	}
+
 	#outer_fairy {
 
 		width: 70%;
@@ -23,11 +32,19 @@ $asteroids: rgb(220, 165, 255);
 		margin: 0px auto;
 		display: block;
 
+		#choose_again {
+
+			font-family: $script;
+			text-align: center;
+			color: white;
+			font-size: 50px;
+			margin-bottom: 30px;
+
+		}
+
 	#fairy_button {
 
-		width: 568px;
-		// position: fixed;
-		bottom: 10px;
+		width: 696px;
 		display: block;
 		margin: 0px auto;
 
@@ -41,39 +58,42 @@ $asteroids: rgb(220, 165, 255);
 				padding: 10px 20px;
 				border-radius: 5px;
 				// margin: 0px 25px;
+				font-family: $blockier;
+				font-size: 20px;
 				
 
 			}
 
 			#exo_b {
 
-				color: white;
-				background-color: rgba(232, 12, 122, .5);
-				border: 2px solid white;
+				color: $exoplanets;
+				// background-color: rgba(232, 12, 122, .5);
+				border: 2px solid rgba(232, 12, 122, .5);
 
 			}
 
 			#com_b {
 
-				color: white;
-				background-color: rgba(255, 13, 255, .5);
-				border: 2px solid white;
+				color: $comets;
+				// background-color: rgba(255, 13, 255, .5);
+				border: 2px solid rgba(255, 13, 255, .5);
 				// margin: 0px auto;
 			} 
 
 			#roc_b {
 
-				color: white;
-				background-color: rgba(0, 255, 127, .5);
-				border: 2px solid white;
+				color: $rockets;
+				// background-color: rgba(0, 255, 127, .5);
+				border: 2px solid rgba(0, 255, 127, .5);
 				// margin: 0px auto;
 			} 
 
 			#ast_b {
 
-				color: white;
-				background-color: rgba(220, 165, 255, .6);
-				border: 2px solid white;
+				color: rgb(198, 148, 229);
+				// background-color: rgba(220, 165, 255, .6);
+				border: 2px solid rgba(220, 165, 255, .7);
+
 			}  
 
 		}

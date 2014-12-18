@@ -3,7 +3,7 @@
 
 	<% if Fairy.exists?(:id => current_user.id) %>
 		<!-- svg window with link capability -->
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="700" width="1000">
+		<svg id="fairy_window" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="700" width="1000">
 			<!-- link to fairy portal (info about realm) -->
     		<a xlink:href="<%= @fairy.portal %>" id="comet_link">
     		<!-- use ellipse tag to avoid conflict with selecting all circles below -->
@@ -22,6 +22,7 @@
 
 
     <div id="outer_fairy">
+        <h2 id="choose_again">Choose a New Realm</h2>
     	<div id="fairy_button">
     		<%= form_for @fairy do |f| %>
     		    <%= f.hidden_field :realm, :value => "rgba(255, 13, 255," %>
