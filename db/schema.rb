@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217223914) do
+ActiveRecord::Schema.define(version: 20141218055908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141217223914) do
   create_table "fairies", force: true do |t|
     t.string  "realm"
     t.integer "user_id"
+    t.string  "portal"
   end
 
   add_index "fairies", ["user_id"], name: "index_user_id", using: :btree

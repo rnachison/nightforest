@@ -45,7 +45,7 @@ class FairiesController < ApplicationController
 
     private
     def fairy_params
-        params.require(:fairy).permit(:realm)
+        params.require(:fairy).permit(:realm, :portal)
     end
 
 end

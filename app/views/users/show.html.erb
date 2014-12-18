@@ -3,7 +3,7 @@
 
 	<% if Fairy.exists?(:id => current_user.id) %>
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="700" width="1500">
-    		<a xlink:href="http://solarsystem.nasa.gov/planets/profile.cfm?Object=Comets" id="comet_link">
+    		<a xlink:href="<%= @fairy.portal %>" id="comet_link">
         	<ellipse id="hoverText" cx="600" cy="400" rx="30" ry="30"
         	      style="stroke: rgba(255, 255, 255, 0); fill: rgba(255, 255, 255, 0);"
       onmouseover="this.style.stroke = '<%= @fairy.realm %>'; this.style['stroke-width'] = 5;"
@@ -19,24 +19,28 @@
 	<div>
 		<%= form_for @fairy do |f| %>
 		    <%= f.hidden_field :realm, :value => "rgb(255, 13, 255)" %>
+		    <%= f.hidden_field :portal, :value => "http://solarsystem.nasa.gov/planets/profile.cfm?Object=Comets" %>
 		    <%= f.submit "Comets" %>
 		<% end %>
 	</div>
 	<div>
 		<%= form_for @fairy do |f| %>
 		    <%= f.hidden_field :realm, :value => "rgb(232, 12, 122)" %>
-		    <%= f.submit "Stars" %>
+		    <%= f.hidden_field :portal, :value => "http://planetquest.jpl.nasa.gov/" %>
+		    <%= f.submit "Exoplanets" %>
 		<% end %>
 	</div>
 	<div>
 		<%= form_for @fairy do |f| %>
 		    <%= f.hidden_field :realm, :value => "rgb(0, 255, 127)" %>
+		    <%= f.hidden_field :portal, :value => "http://en.wikipedia.org/wiki/Sally_Ride" %>
 		    <%= f.submit "Rockets" %>
 		<% end %>
 	</div>
 	<div>
 		<%= form_for @fairy do |f| %>
 		    <%= f.hidden_field :realm, :value => "rgb(220, 165, 255)" %>
+		    <%= f.hidden_field :portal, :value => "http://solarsystem.nasa.gov/planets/profile.cfm?Object=Asteroids" %>
 		    <%= f.submit "Asteroids" %>
 		<% end %>
 	</div>
@@ -151,9 +155,6 @@
 
         };
 
-     //    document.getElementById('hoverText')
-	    // .on("mouseover", function() { document.getElementById('hoverText').style.display = null; })
-     //  	.on("mouseout", function() { document.getElementById('hoverText').style.display = "none"; });
 
 	</script>
 
