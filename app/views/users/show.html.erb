@@ -1,34 +1,18 @@
 <body id="user_page">
 
-
-	<% if Fairy.exists?(:id => current_user.id) %>
-		<!-- svg window with link capability -->
-		<svg id="fairy_window" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="700" width="1000">
-			<!-- link to fairy portal (info about realm) -->
-    		<a xlink:href="<%= @fairy.portal %>" id="comet_link">
-    		<!-- use ellipse tag to avoid conflict with selecting all circles below -->
-    		<!-- make transparent, except border on mouseover -->
-        	<ellipse id="hoverText" cx="600" cy="400" rx="30" ry="30"
-        	    style="stroke: rgba(255, 255, 255, 0); fill: rgba(255, 255, 255, 0);"
-      			onmouseover="this.style.stroke = '<%= @fairy.realm %> 1)'; this.style['stroke-width'] = 5;"
-       			onmouseout="this.style.stroke = 'rgba(255, 255, 255, 0)'; this.style['stroke-width'] = 1;"
-        	/>
-    		</a>
-
-		</svg>
-	<% else %>
-		<h2>Please Choose A Realm For Your Fairy Guides</h2>
-	<% end %>
-
+    <% if Fairy.exists?(:id => current_user.id) %>
+        <h2 class="choose_realm">Choose a New Realm</h2>
+    <% else %>
+        <h2 class="choose_realm">Please Choose A Realm For Your Fairy Guides</h2>
+    <% end %>
 
     <div id="outer_fairy">
-        <h2 id="choose_again">Choose a New Realm</h2>
-    	<div id="fairy_button">
-    		<%= form_for @fairy do |f| %>
-    		    <%= f.hidden_field :realm, :value => "rgba(255, 13, 255," %>
-    		    <%= f.hidden_field :portal, :value => "http://solarsystem.nasa.gov/planets/profile.cfm?Object=Comets" %>
-    		    <%= f.submit "Comet Fairies", :class => "realm_button", :id => "com_b" %>
-    		<% end %>
+        <div id="fairy_button">
+            <%= form_for @fairy do |f| %>
+                <%= f.hidden_field :realm, :value => "rgba(255, 13, 255," %>
+                <%= f.hidden_field :portal, :value => "http://solarsystem.nasa.gov/planets/profile.cfm?Object=Comets" %>
+                <%= f.submit "Comet Fairies", :class => "realm_button", :id => "com_b" %>
+            <% end %>
 
             <%= form_for @fairy do |f| %>
                 <%= f.hidden_field :realm, :value => "rgba(220, 165, 255," %>
@@ -36,19 +20,40 @@
                 <%= f.submit "Asteroid Fairies", :class => "realm_button", :id => "ast_b" %>
             <% end %>
 
-    		<%= form_for @fairy do |f| %>
-    		    <%= f.hidden_field :realm, :value => "rgba(232, 12, 122," %>
-    		    <%= f.hidden_field :portal, :value => "http://planetquest.jpl.nasa.gov/" %>
-    		    <%= f.submit "Exoplanet Fairies", :class => "realm_button", :id => "exo_b" %>
-    		<% end %>
+            <%= form_for @fairy do |f| %>
+                <%= f.hidden_field :realm, :value => "rgba(232, 12, 122," %>
+                <%= f.hidden_field :portal, :value => "http://planetquest.jpl.nasa.gov/" %>
+                <%= f.submit "Exoplanet Fairies", :class => "realm_button", :id => "exo_b" %>
+            <% end %>
 
-    		<%= form_for @fairy do |f| %>
-    		    <%= f.hidden_field :realm, :value => "rgba(0, 255, 127," %>
-    		    <%= f.hidden_field :portal, :value => "http://en.wikipedia.org/wiki/Sally_Ride" %>
-    		    <%= f.submit "Rocket Fairies", :class => "realm_button", :id => "roc_b" %>
-    		<% end %>
-    	</div>
+            <%= form_for @fairy do |f| %>
+                <%= f.hidden_field :realm, :value => "rgba(0, 255, 127," %>
+                <%= f.hidden_field :portal, :value => "http://en.wikipedia.org/wiki/Sally_Ride" %>
+                <%= f.submit "Rocket Fairies", :class => "realm_button", :id => "roc_b" %>
+            <% end %>
+        </div>
     </div>
+
+
+	<% if Fairy.exists?(:id => current_user.id) %>
+		<!-- svg window with link capability -->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="600" width="1000">
+			<!-- link to fairy portal (info about realm) -->
+    		<a xlink:href="<%= @fairy.portal %>" id="comet_link">
+    		<!-- use ellipse tag to avoid conflict with selecting all circles below -->
+    		<!-- make transparent, except border on mouseover -->
+        	<ellipse id="hoverText" cx="630" cy="300" rx="30" ry="30"
+        	    style="stroke: rgba(255, 255, 255, 0); fill: rgba(255, 255, 255, 0);"
+      			onmouseover="this.style.stroke = '<%= @fairy.realm %> 1)'; this.style['stroke-width'] = 5;"
+       			onmouseout="this.style.stroke = 'rgba(255, 255, 255, 0)'; this.style['stroke-width'] = 1;"
+        	/>
+    		</a>
+
+		</svg>
+	<% end %>
+
+
+
 
 	<script type="text/javascript">
 

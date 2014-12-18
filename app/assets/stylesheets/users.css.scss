@@ -19,9 +19,14 @@ $blockier: 'Marck Script', cursive;
 	background-repeat: no-repeat;
 
 
-	#fairy_window {
+	.choose_realm {
 
-		position: absolute;
+		font-family: $script;
+		text-align: center;
+		color: white;
+		font-size: 50px;
+		margin-bottom: 30px;
+		// position: absolute;
 
 	}
 
@@ -32,15 +37,6 @@ $blockier: 'Marck Script', cursive;
 		margin: 0px auto;
 		display: block;
 
-		#choose_again {
-
-			font-family: $script;
-			text-align: center;
-			color: white;
-			font-size: 50px;
-			margin-bottom: 30px;
-
-		}
 
 	#fairy_button {
 
