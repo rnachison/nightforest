@@ -13,8 +13,7 @@ class FairiesController < ApplicationController
 	    if @fairy.save
 	    	if current_user != nil
 		        @user = User.find(current_user)
-				@user.fairy << @fairy
-				redirect_to user_path
+				redirect_to user_path(@user)
 			else
 				flash.notice = 'Please log in before choosing fairy guides'
 				redirect_to root_path
@@ -22,6 +21,26 @@ class FairiesController < ApplicationController
 	    else
 	        render "new"
 	    end
+	end
+
+	def edit
+		@fairy = Fairy.find(params[:id])
+	end
+
+	def update
+		@fairy = Fairy.find(params[:id])
+		if current_user != nil
+		    @user = User.find(current_user)
+			if @fairy.update_attributes(fairy_params)
+				redirect_to user_path(@user)
+			else
+				render 'edit'
+			end
+		else
+			flash.notice = 'Please log in before choosing fairy guides'
+			redirect_to root_path
+		end
+
 	end
 
     private

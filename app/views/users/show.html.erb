@@ -1,8 +1,12 @@
 <body id="user_page">
 
 
-
-
-<div id="button_d"><%= link_to '<button type="button" class="call_button">CALL</button>'.html_safe, new_fairy_path, :class => "call_button_text" %></div>
+<% if Fairy.exists?(:id => current_user.id) %>
+<p><%= @fairy.realm %></p>
+<%= @fairy.id %>
+<div class="button_c"><%= link_to '<button type="button" class="choose_button">CHOOSE NEW FAIRY GUIDES</button>'.html_safe, edit_fairy_path, :class => "choose_button_text" %></div>
+<% else %>
+<div class="button_c"><%= link_to '<button type="button" class="choose_button">CHOOSE FAIRY GUIDES</button>'.html_safe, new_fairy_path, :class => "choose_button_text" %></div>
+<% end %>
 
 </body>

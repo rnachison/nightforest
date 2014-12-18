@@ -17,6 +17,12 @@ class UsersController < ApplicationController
 	    end
 	end
 
+    def show
+        if Fairy.exists?(:id => current_user.id)
+            @fairy = Fairy.find(params[:id])
+        end
+    end
+
     private
     def user_params
         params.require(:user).permit(:email, :password, :password_confirmation, :username)
