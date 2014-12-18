@@ -72,7 +72,7 @@
             })
 
             .attr("fill", function(d, i) {
-                return yearColor[i % 4];
+                return d3.rgb(255, Math.random() * 255, Math.random() * 255);
             })
 
             .attr("id", function(d, i) {
@@ -87,7 +87,7 @@
 
             // select each planet id individually
             svg.select("#planet" + z).attr("fill", function(d, i){
-                return "hsl(" + Math.random() * 360 + ",100%,50%)";
+                return d3.rgb(255, Math.random() * 255, Math.random() * 255);
             });
         }, year[z])
 
