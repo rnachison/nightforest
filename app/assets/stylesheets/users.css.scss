@@ -16,4 +16,58 @@ $asteroids: rgb(220, 165, 255);
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	#fairy_button {
+
+		position: fixed;
+		bottom: 10px;
+		display: block;
+		margin: 0px auto;
+
+		form { 
+
+			display:inline-block;
+
+			.realm_button {
+
+				background-color: rgba(255, 255, 255, .8);
+				padding: 10px 20px;
+				border-radius: 5px;
+				margin-left: 150px;
+				
+
+			}
+
+			#exo_b {
+
+				color: white;
+				background-color: rgba(232, 12, 122, .5);
+				border: 2px solid white;
+			}
+
+			#com_b {
+
+				color: white;
+				background-color: rgba(255, 13, 255, .5);
+				border: 2px solid white;
+			} 
+
+			#roc_b {
+
+				color: white;
+				background-color: rgba(0, 255, 127, .5);
+				border: 2px solid white;
+			} 
+
+			#ast_b {
+
+				color: white;
+				background-color: rgba(220, 165, 255, .6);
+				border: 2px solid white;
+			}  
+
+		}
+
+	}
+
 }
+
