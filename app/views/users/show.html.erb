@@ -1,6 +1,5 @@
 <body id="user_page">
 
-
 <% if Fairy.exists?(:id => current_user.id) %>
 <p><%= @fairy.realm %></p>
 <%= @fairy.id %>
@@ -8,5 +7,32 @@
 <% else %>
 <div class="button_c"><%= link_to '<button type="button" class="choose_button">CHOOSE FAIRY GUIDES</button>'.html_safe, new_fairy_path, :class => "choose_button_text" %></div>
 <% end %>
+
+<%= form_for @fairy do |f| %>
+    <%= f.hidden_field :realm, :value => "comet" %>
+    <%= f.submit "Comets" %>
+<% end %>
+
+<%= form_for @fairy do |f| %>
+    <%= f.hidden_field :realm, :value => "star" %>
+    <%= f.submit "Stars" %>
+<% end %>
+
+<%= form_for @fairy do |f| %>
+    <%= f.hidden_field :realm, :value => "rocket" %>
+    <%= f.submit "Rockets" %>
+<% end %>
+
+<%= form_for @fairy do |f| %>
+    <%= f.hidden_field :realm, :value => "asteroids" %>
+    <%= f.submit "Asteroids" %>
+<% end %>
+
+	<script type="text/javascript">
+
+
+
+	</script>
+
 
 </body>

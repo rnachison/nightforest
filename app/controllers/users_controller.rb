@@ -20,6 +20,8 @@ class UsersController < ApplicationController
     def show
         if Fairy.exists?(:id => current_user.id)
             @fairy = Fairy.find(params[:id])
+        else 
+            @fairy = Fairy.new
         end
     end
 
