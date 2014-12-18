@@ -16,9 +16,17 @@ $asteroids: rgb(220, 165, 255);
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	#outer_fairy {
+
+		width: 70%;
+		height: 60px;
+		margin: 0px auto;
+		display: block;
+
 	#fairy_button {
 
-		position: fixed;
+		width: 568px;
+		// position: fixed;
 		bottom: 10px;
 		display: block;
 		margin: 0px auto;
@@ -32,7 +40,7 @@ $asteroids: rgb(220, 165, 255);
 				background-color: rgba(255, 255, 255, .8);
 				padding: 10px 20px;
 				border-radius: 5px;
-				margin-left: 150px;
+				// margin: 0px 25px;
 				
 
 			}
@@ -42,6 +50,7 @@ $asteroids: rgb(220, 165, 255);
 				color: white;
 				background-color: rgba(232, 12, 122, .5);
 				border: 2px solid white;
+
 			}
 
 			#com_b {
@@ -49,6 +58,7 @@ $asteroids: rgb(220, 165, 255);
 				color: white;
 				background-color: rgba(255, 13, 255, .5);
 				border: 2px solid white;
+				// margin: 0px auto;
 			} 
 
 			#roc_b {
@@ -56,6 +66,7 @@ $asteroids: rgb(220, 165, 255);
 				color: white;
 				background-color: rgba(0, 255, 127, .5);
 				border: 2px solid white;
+				// margin: 0px auto;
 			} 
 
 			#ast_b {
@@ -68,6 +79,8 @@ $asteroids: rgb(220, 165, 255);
 		}
 
 	}
+
+}
 
 }
 
