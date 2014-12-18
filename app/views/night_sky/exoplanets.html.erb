@@ -27,7 +27,17 @@
 
         // console.log(temp);
 
-        var year = [d3.rgb(255, 13, 255), d3.rgb(232, 12, 122), d3.rgb(0, 255, 127), d3.rgb(220, 165, 255)]
+        var yearColor = [d3.rgb(255, 13, 255), d3.rgb(232, 12, 122), d3.rgb(0, 255, 127), d3.rgb(220, 165, 255)];
+
+        // create empty array year
+        var year = [];
+        // push orbital period absolute value into year
+        <% @exo.each do |x| %>
+            year.push(Math.abs(<%= x['PER'] %>) * 100);
+        <% end %>
+
+        console.log(year);
+
 
         // create variable svg = svg
         var svg = d3.select('svg');
@@ -52,9 +62,15 @@
             })
 
             .attr("fill", function(d, i) {
-                return year[i % 4];
+                return yearColor[i % 4];
             });
 
+
+        setInterval(function(d, i){
+            svg.selectAll("circle").attr("fill", function(d, i){
+                return "hsl(" + Math.random() * 360 + ",100%,50%)";
+            });
+        }, year[2]);
 
 
 
