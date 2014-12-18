@@ -2,12 +2,16 @@
 
 
 	<% if Fairy.exists?(:id => current_user.id) %>
+		<!-- svg window with link capability -->
 		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="700" width="1500">
+			<!-- link to fairy portal (info about realm) -->
     		<a xlink:href="<%= @fairy.portal %>" id="comet_link">
+    		<!-- use ellipse tag to avoid conflict with selecting all circles below -->
+    		<!-- make transparent, except border on mouseover -->
         	<ellipse id="hoverText" cx="600" cy="400" rx="30" ry="30"
-        	      style="stroke: rgba(255, 255, 255, 0); fill: rgba(255, 255, 255, 0);"
-      onmouseover="this.style.stroke = '<%= @fairy.realm %>'; this.style['stroke-width'] = 5;"
-       onmouseout="this.style.stroke = 'rgba(255, 255, 255, 0)'; this.style['stroke-width'] = 1;"
+        	    style="stroke: rgba(255, 255, 255, 0); fill: rgba(255, 255, 255, 0);"
+      			onmouseover="this.style.stroke = '<%= @fairy.realm %>'; this.style['stroke-width'] = 5;"
+       			onmouseout="this.style.stroke = 'rgba(255, 255, 255, 0)'; this.style['stroke-width'] = 1;"
         	/>
     		</a>
 
