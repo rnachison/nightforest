@@ -2,7 +2,7 @@
 
     <svg height="800" width="1500">
 
-  <ellipse cx="200" cy="712" rx="50" ry="50"
+  <ellipse cx="200" cy="712" rx="1" ry="1"
   style="fill:white;stroke:white;stroke-width:2" />
 
     </svg>
@@ -25,7 +25,9 @@
             temp.push(-<%= x['TPLANET'] %> + 1000);
         <% end %>
 
-        console.log(temp);
+        // console.log(temp);
+
+        var year = [d3.rgb(255, 13, 255), d3.rgb(232, 12, 122), d3.rgb(0, 255, 127), d3.rgb(220, 165, 255)]
 
         // create variable svg = svg
         var svg = d3.select('svg');
@@ -34,10 +36,12 @@
 
         .enter().append("circle")
 
+            // assign radius to radii
             .attr("r", function(d) {
                 return d;
             })
 
+            // assign height to temperature
             .attr("cy", function(d,i) {
                 return temp[i];
             })
@@ -45,6 +49,10 @@
             .attr("cx", function(d, i) {
 
                 return i;
+            })
+
+            .attr("fill", function(d, i) {
+                return year[i % 4];
             });
 
 
