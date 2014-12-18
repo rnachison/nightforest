@@ -2,7 +2,7 @@
 
     <svg height="800" width="1500">
 
-  <ellipse cx="200" cy="712" rx="1" ry="1"
+  <ellipse cx="700" cy="712" rx="1" ry="1"
   style="fill:white;stroke:white;stroke-width:2" />
 
     </svg>
@@ -33,10 +33,18 @@
         var year = [];
         // push orbital period absolute value into year
         <% @exo.each do |x| %>
-            year.push(Math.abs(<%= x['PER'] %>) * 100);
+            year.push(Math.abs(<%= x['PER'] %>) * 1000);
         <% end %>
 
         console.log(year);
+
+        var planetNum = [];
+        <% @exo.each_index do |z| %>
+            planetNum.push(<%= z %>);
+        <% end %>
+
+        console.log(planetNum);
+
 
 
         // create variable svg = svg
@@ -58,19 +66,29 @@
 
             .attr("cx", function(d, i) {
 
-                return i;
+                return (i * 1.3);
             })
 
             .attr("fill", function(d, i) {
                 return yearColor[i % 4];
+            })
+
+            .attr("id", function(d, i) {
+                return "planet" + i;
             });
+
+
+        planetNum.forEach(function(z){
 
 
         setInterval(function(d, i){
-            svg.selectAll("circle").attr("fill", function(d, i){
+
+            svg.select("#planet" + z).attr("fill", function(d, i){
                 return "hsl(" + Math.random() * 360 + ",100%,50%)";
             });
-        }, year[2]);
+        }, year[z])
+
+        })
 
 
 
