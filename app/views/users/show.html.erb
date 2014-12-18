@@ -1,34 +1,42 @@
 <body id="user_page">
 
-<% if Fairy.exists?(:id => current_user.id) %>
-<p><%= @fairy.realm %></p>
-<%= @fairy.id %>
-<svg height="700" width="1500">
-</svg>
-<div class="button_c"><%= link_to '<button type="button" class="choose_button">CHOOSE NEW FAIRY GUIDES</button>'.html_safe, edit_fairy_path, :class => "choose_button_text" %></div>
-<% else %>
-<div class="button_c"><%= link_to '<button type="button" class="choose_button">CHOOSE FAIRY GUIDES</button>'.html_safe, new_fairy_path, :class => "choose_button_text" %></div>
-<% end %>
 
-<%= form_for @fairy do |f| %>
-    <%= f.hidden_field :realm, :value => "rgb(255, 13, 255)" %>
-    <%= f.submit "Comets" %>
-<% end %>
+	<% if Fairy.exists?(:id => current_user.id) %>
+		<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" height="700" width="1500">
+    		<a xlink:href="http://solarsystem.nasa.gov/planets/profile.cfm?Object=Comets" id="comet_link">
+        	<rect x="400" y="300" width="75" height="30" style="stroke: #333366; fill: #6666cc" />
+    		</a>
 
-<%= form_for @fairy do |f| %>
-    <%= f.hidden_field :realm, :value => "rgb(232, 12, 122)" %>
-    <%= f.submit "Stars" %>
-<% end %>
+		</svg>
+	<% else %>
+		<h2>Please Choose A Realm For Your Fairy Guides</h2>
+	<% end %>
 
-<%= form_for @fairy do |f| %>
-    <%= f.hidden_field :realm, :value => "rgb(0, 255, 127)" %>
-    <%= f.submit "Rockets" %>
-<% end %>
-
-<%= form_for @fairy do |f| %>
-    <%= f.hidden_field :realm, :value => "rgb(220, 165, 255)" %>
-    <%= f.submit "Asteroids" %>
-<% end %>
+	<div>
+		<%= form_for @fairy do |f| %>
+		    <%= f.hidden_field :realm, :value => "rgb(255, 13, 255)" %>
+		    <%= f.submit "Comets" %>
+		<% end %>
+	</div>
+	<div>
+		<%= form_for @fairy do |f| %>
+		    <%= f.hidden_field :realm, :value => "rgb(232, 12, 122)" %>
+		    <%= f.submit "Stars" %>
+		<% end %>
+	</div>
+	<div>
+		<%= form_for @fairy do |f| %>
+		    <%= f.hidden_field :realm, :value => "rgb(0, 255, 127)" %>
+		    <%= f.submit "Rockets" %>
+		<% end %>
+	</div>
+	<div>
+		<%= form_for @fairy do |f| %>
+		    <%= f.hidden_field :realm, :value => "rgb(220, 165, 255)" %>
+		    <%= f.submit "Asteroids" %>
+		<% end %>
+	</div>
 
 	<script type="text/javascript">
 
@@ -39,7 +47,7 @@
 
 
         // number of fairies, length of radii = random
-        var nodes = d3.range(100).map(function(d, i) { return {radius: Math.random() * 5}; }),
+        var nodes = d3.range(400).map(function(d, i) { return {radius: Math.random() * 5}; }),
             // set root node
             root = nodes[0];
         // set color = fairy color
@@ -52,11 +60,12 @@
 
         var force = d3.layout.force()
             // fireflies repel each other, move away from cursor
-            .charge(function(d, i) { return i ? (Math.random() * -150) : -2250; })
+            .charge(function(d, i) { return i ? 0 : -4000; })
             // use nodes array instead of current empty array
             .nodes(nodes)
+            .distance(500)
             // link between fireflies is weak
-            .linkStrength(0.001)
+            .linkStrength(0.1)
             // spread over d3 window
             .size([width, height])
             .alpha(2)
