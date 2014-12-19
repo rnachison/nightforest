@@ -32,12 +32,18 @@ html {
 		top: 0px;
 		right: 0px;
 
-		.user_links, {
+		.user_links {
 
 			color: $top;
 			text-decoration: none;
 			font-family: $blockier;
 			font-size: 16px;
+
+		}
+
+		.user_links:active {
+
+			color: rgb(232, 12, 122);
 
 		}
 
@@ -49,6 +55,12 @@ html {
 			border-bottom-left-radius: 20px;
 			border-bottom-right-radius: 20px;
 			display: inline-block;
+
+		}
+
+		.right_links:hover {
+
+			background-color: white;
 
 		}
 
@@ -69,6 +81,11 @@ html {
 
 		}
 
+		.path_links:active {
+
+			color: rgb(232, 12, 122);
+		}
+
 		.left_links {
 
 			background-color: rgba(255, 255, 255, .7);
@@ -78,6 +95,11 @@ html {
 			border-bottom-right-radius: 20px;
 			display: inline-block;
 
+		}
+
+		.left_links:hover {
+
+			background-color: white;
 		}
 
 	}

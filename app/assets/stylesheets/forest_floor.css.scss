@@ -1,5 +1,6 @@
 $moss: rgb(45, 64, 37);
 $script: 'Bilbo Swash Caps', cursive;
+$top: rgb(147, 43, 204);
 $blockier: 'Marck Script', cursive;
 
 // Style root page
@@ -55,12 +56,30 @@ $blockier: 'Marck Script', cursive;
 				
 			}
 
+			.call_button:hover {
+
+				background-color: white;
+				border: 1px solid $top;
+			}
+
 			.call_button_text {
 
 				color: $moss;
 				font-size: 30px;
 				font-family: $blockier;
 				text-decoration: none;
+
+			}
+
+			.call_button_text:hover {
+
+				color: $top;
+
+			}
+
+			.call_button_text:active {
+
+				color: rgb(232, 12, 122);
 
 			}
 

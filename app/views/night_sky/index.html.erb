@@ -1,11 +1,13 @@
 <body id="sky">
 
 
-<div id="sky_head">
-    <h1 class="home_world">Search For A New Home</h1>
-    <h2 class="home_world">See potentially habitable exoplanets</h2>
-</div>
+  <div id="sky_head">
+      <h1 class="home_world">Search For A New Home</h1>
+      <h2 class="home_world">See potentially habitable exoplanets</h2>
+  </div>
 
+  <!-- button to see exoplanets -->
+  <div id="button_ex"><%= link_to '<button type="button" class="ex_button">Seek</button>'.html_safe, exoplanets_path, :class => "ex_button_text" %></div>
 
 
 </body>

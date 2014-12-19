@@ -45,8 +45,54 @@ $blockier: 'Marck Script', cursive;
 
 		}
 
+
 	}
 
+	#button_ex {
+
+		width: 10%;
+		margin: 90px auto;
+
+		.ex_button {
+
+			display: inline;
+			background-color: rgba(255, 255, 255, .5);
+			border-radius: 20px;
+			border: 1px solid $teal;
+			margin: 0px auto;
+			padding: 5px 30px;
+			
+		}
+
+		.ex_button:hover {
+
+			background-color: white;
+			border: 1px solid $violet;
+
+		}
+
+		.ex_button_text {
+
+			color: $teal;
+			font-size: 30px;
+			font-family: $blockier;
+			text-decoration: none;
+
+		}
+
+		.ex_button_text:hover {
+
+			color: $violet;
+
+		}
+
+		.ex_button_text:active {
+
+			color: rgb(232, 12, 122);
+
+		}
+
+	}
 
 
 }
@@ -58,6 +104,17 @@ $blockier: 'Marck Script', cursive;
 	background-image: url(image_path('space_purple.jpg'));
 	background-size: cover;
 	background-repeat: no-repeat;
+
+
+	#earth {
+
+		font-family: $blockier;
+		color: white;
+		position: absolute;
+		top: 720px;
+		left: 678px;
+		font-size: 20px;
+	}
 
 
 }
