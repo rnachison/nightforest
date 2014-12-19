@@ -76,5 +76,15 @@ $blockier: 'Marck Script', cursive;
     background-image: url(image_path('Yakushima_Forest.jpg'));
     background-size: cover;
     background-repeat: no-repeat;
+
+    #mimic {
+
+    	font-family: $script;
+    	color: white;
+    	text-align: center;
+    	font-size: 70px;
+    	margin: 0px auto;
+
+    }
     
 }
