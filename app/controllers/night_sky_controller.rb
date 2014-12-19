@@ -9,5 +9,7 @@ class NightSkyController < ApplicationController
 		@exo = JSON.parse(uri3.body)
 	end
 
+	def about
+	end
 
 end

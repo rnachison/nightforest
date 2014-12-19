@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get 'night_sky/exoplanets' => 'night_sky#exoplanets', as: :exoplanets
 
+  get 'night_sky/about' => 'night_sky#about', as: :about
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

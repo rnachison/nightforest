@@ -106,6 +106,7 @@ $blockier: 'Marck Script', cursive;
 	background-repeat: no-repeat;
 
 
+
 	#earth {
 
 		font-family: $blockier;
@@ -117,4 +118,17 @@ $blockier: 'Marck Script', cursive;
 	}
 
 
+}
+
+
+#about {
+
+	height: 100%;
+	width: 100%;
+	background-image: url(image_path('space_purple.jpg'));
+	background-size: cover;
+	background-repeat: no-repeat;
+
+
+	
 }
