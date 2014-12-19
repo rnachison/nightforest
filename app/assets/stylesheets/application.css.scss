@@ -16,11 +16,11 @@
 @import 'bootstrap';
 
 
-$exoplanets: rgb(232, 12, 122);
+$top: rgb(147, 43, 204);
 $blockier: 'Marck Script', cursive;
 
 
-html, #container {
+html {
 
 	height: 100%;
 	width:100%;
@@ -34,14 +34,14 @@ html, #container {
 
 		.user_links, {
 
-			color: $exoplanets;
+			color: $top;
 			text-decoration: none;
 			font-family: $blockier;
 			font-size: 16px;
 
 		}
 
-		#upage {
+		.right_links {
 
 			background-color: rgba(255, 255, 255, .7);
 			text-align: center;
@@ -52,7 +52,24 @@ html, #container {
 
 		}
 
-		#logout {
+	}
+
+		#path_header {
+
+		position: fixed;
+		top: 0px;
+		left: 0px;
+
+		.path_links, {
+
+			color: $top;
+			text-decoration: none;
+			font-family: $blockier;
+			font-size: 16px;
+
+		}
+
+		.left_links {
 
 			background-color: rgba(255, 255, 255, .7);
 			text-align: center;
@@ -62,6 +79,7 @@ html, #container {
 			display: inline-block;
 
 		}
+
 	}
 
 }
