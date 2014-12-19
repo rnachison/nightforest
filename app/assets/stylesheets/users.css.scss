@@ -127,13 +127,13 @@ $blockier: 'Marck Script', cursive;
 	.error_messages {
 
 		color: white;
-		font-family: $script;
-		font-size: 30px;
+		font-family: $blockier;
+		font-size: 15px;
 		margin-top: 10px;
 
 	}
 
-	#signup_h {
+	.sign_h {
 
 		margin-top: 95px;
 		font-family: $script;
@@ -161,7 +161,7 @@ $blockier: 'Marck Script', cursive;
 		}
 
 
-		.signup_b {
+		.sign_b {
 
 			background-color: rgba(255, 255, 255, .8);
 			font-family: $blockier;
@@ -173,7 +173,7 @@ $blockier: 'Marck Script', cursive;
 			margin-top: 20px;
 		}
 
-		.signup_b:hover {
+		.sign_b:hover {
 
 			background-color: white;
 		}

@@ -1,3 +1,74 @@
 // Place all the styles related to the sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$script: 'Bilbo Swash Caps', cursive;
+$blockier: 'Marck Script', cursive;
+
+#login {
+
+	height: 100%;
+	width: 100%;
+	background-image: url(image_path('Pena_forest.jpg'));
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+
+	.error_messages {
+
+		color: white;
+		font-family: $blockier;
+		font-size: 15px;
+		margin-top: 10px;
+
+	}
+
+	.sign_h {
+
+		margin-top: 95px;
+		font-family: $script;
+		color: white;
+		font-size: 70px;
+	}
+
+	.login_form {
+
+		margin-top: 10px;
+
+
+		.field {
+
+			font-family: $blockier;
+			color: white;
+			font-size: 18px;
+			padding: 20px;
+
+			input {
+
+				color: black;
+			}
+			
+		}
+
+
+		.sign_b {
+
+			background-color: rgba(255, 255, 255, .8);
+			font-family: $blockier;
+			padding: 10px 30px;
+			border: 2px solid white;
+			border-radius: 20px;
+			color: black;
+			font-size: 16px;
+			margin-top: 20px;
+		}
+
+		.sign_b:hover {
+
+			background-color: white;
+		}
+	}
+
+
+
+}
