@@ -15,9 +15,53 @@
  */
 @import 'bootstrap';
 
-html {
+
+$exoplanets: rgb(232, 12, 122);
+$blockier: 'Marck Script', cursive;
+
+
+html, #container {
 
 	height: 100%;
 	width:100%;
+
+
+	#user_header {
+
+		position: fixed;
+		top: 0px;
+		right: 0px;
+
+		.user_links, {
+
+			color: $exoplanets;
+			text-decoration: none;
+			font-family: $blockier;
+			font-size: 16px;
+
+		}
+
+		#upage {
+
+			background-color: rgba(255, 255, 255, .7);
+			text-align: center;
+			padding: 10px 10px 20px 10px;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			display: inline-block;
+
+		}
+
+		#logout {
+
+			background-color: rgba(255, 255, 255, .7);
+			text-align: center;
+			padding: 10px 10px 20px 10px;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			display: inline-block;
+
+		}
+	}
 
 }

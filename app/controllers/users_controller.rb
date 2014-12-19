@@ -18,10 +18,15 @@ class UsersController < ApplicationController
 	end
 
     def show
-        if Fairy.exists?(:id => current_user.id)
-            @fairy = Fairy.find(params[:id])
-        else 
-            @fairy = Fairy.new
+
+        if current_user != nil
+            @user = User.find(params[:id])
+
+            if Fairy.exists?(:id => current_user.id)
+                @fairy = Fairy.find(params[:id])
+            else 
+                @fairy = Fairy.new
+            end
         end
     end
 

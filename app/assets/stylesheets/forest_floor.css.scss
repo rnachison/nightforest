@@ -1,5 +1,6 @@
 $moss: rgb(45, 64, 37);
-$hand: 'The Girl Next Door', cursive;
+$script: 'Bilbo Swash Caps', cursive;
+$blockier: 'Marck Script', cursive;
 
 // Style root page
 #floor {
@@ -23,7 +24,7 @@ $hand: 'The Girl Next Door', cursive;
 
 			color: $moss;
 			text-align: center;
-			font-family: $hand;
+			font-family: $script;
 
 		}
 
@@ -55,7 +56,7 @@ $hand: 'The Girl Next Door', cursive;
 
 				color: $moss;
 				font-size: 20px;
-				font-family: $hand;
+				font-family: $blockier;
 
 			}
 
