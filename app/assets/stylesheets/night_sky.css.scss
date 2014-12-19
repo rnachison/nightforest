@@ -1,7 +1,11 @@
 // style night_sky/ page
 
 $violet: rgb(255, 15, 255);
-$teal: rgba(0, 108, 127, .9);
+$teal: rgba(0, 108, 127, 1);
+$script: 'Bilbo Swash Caps', cursive;
+$fancy: 'Niconne', cursive;
+$blockier: 'Marck Script', cursive;
+
 
 #sky {
 
@@ -20,12 +24,24 @@ $teal: rgba(0, 108, 127, .9);
 		margin: 18% auto 0% auto;
 		border-radius: 20px;
 		border: 2px solid $teal;
-
+		
 		// "Find A New Home"
 		.home_world {
 
 			color: $teal;
 			text-align: center;
+			font-family: $fancy;
+
+		}
+
+		h1.home_world {
+
+			font-size: 70px;
+		}
+
+		h2.home_world {
+
+			font-size: 40px;
 
 		}
 
