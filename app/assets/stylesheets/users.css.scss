@@ -47,71 +47,82 @@ $blockier: 'Marck Script', cursive;
 		display: block;
 
 
-	#fairy_button {
+		#fairy_button {
 
-		width: 696px;
-		display: block;
-		margin: 0px auto;
+			width: 696px;
+			display: block;
+			margin: 0px auto;
 
-		form { 
+			form { 
 
-			display:inline-block;
+				display:inline-block;
 
-			.realm_button {
+				.realm_button {
 
-				background-color: rgba(255, 255, 255, .8);
-				padding: 10px 20px;
-				border-radius: 5px;
-				// margin: 0px 25px;
-				font-family: $blockier;
-				font-size: 20px;
-				
+					background-color: rgba(255, 255, 255, .8);
+					padding: 10px 20px;
+					border-radius: 5px;
+					// margin: 0px 25px;
+					font-family: $blockier;
+					font-size: 20px;
+					
+
+				}
+
+				.realm_button:hover {
+
+					background-color: white;
+
+				}
+
+				#exo_b {
+
+					color: $exoplanets;
+					// background-color: rgba(232, 12, 122, .5);
+					border: 2px solid rgba(232, 12, 122, .5);
+
+				}
+
+				#com_b {
+
+					color: $comets;
+					// background-color: rgba(255, 13, 255, .5);
+					border: 2px solid rgba(255, 13, 255, .5);
+					// margin: 0px auto;
+				} 
+
+				#roc_b {
+
+					color: rgb(0, 214, 107);
+					// background-color: rgba(0, 255, 127, .5);
+					border: 2px solid rgba(0, 255, 127, .5);
+					// margin: 0px auto;
+				} 
+
+				#ast_b {
+
+					color: rgb(198, 148, 229);
+					// background-color: rgba(220, 165, 255, .6);
+					border: 2px solid rgba(220, 165, 255, .7);
+
+				}  
 
 			}
-
-			.realm_button:hover {
-
-				background-color: white;
-
-			}
-
-			#exo_b {
-
-				color: $exoplanets;
-				// background-color: rgba(232, 12, 122, .5);
-				border: 2px solid rgba(232, 12, 122, .5);
-
-			}
-
-			#com_b {
-
-				color: $comets;
-				// background-color: rgba(255, 13, 255, .5);
-				border: 2px solid rgba(255, 13, 255, .5);
-				// margin: 0px auto;
-			} 
-
-			#roc_b {
-
-				color: rgb(0, 214, 107);
-				// background-color: rgba(0, 255, 127, .5);
-				border: 2px solid rgba(0, 255, 127, .5);
-				// margin: 0px auto;
-			} 
-
-			#ast_b {
-
-				color: rgb(198, 148, 229);
-				// background-color: rgba(220, 165, 255, .6);
-				border: 2px solid rgba(220, 165, 255, .7);
-
-			}  
 
 		}
 
 	}
 
 }
+
+#signup {
+
+	height: 100%;
+	width: 100%;
+	background-image: url(image_path('fairy.jpg'));
+	background-size: cover;
+	background-repeat: no-repeat;
+
 
 }
 
