@@ -2,6 +2,7 @@
 
 $violet: rgb(255, 15, 255);
 $teal: rgba(0, 108, 127, 1);
+$top: rgb(147, 43, 204);
 $script: 'Bilbo Swash Caps', cursive;
 $fancy: 'Niconne', cursive;
 $blockier: 'Marck Script', cursive;
@@ -129,6 +130,30 @@ $blockier: 'Marck Script', cursive;
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	#about_div {
 
-	
+		height: 10%;
+		width: 80%;
+		background-color: rgba(255, 255, 255, .5);
+		margin: 10% auto 0% auto;
+		padding: 20px;
+		border-radius: 20px;
+		border: 2px solid $top;
+		font-size: 30px;
+		color: $top;
+		font-family: $blockier;
+
+		.about_h {
+
+			text-align: center;
+			font-family: $fancy;
+			font-size: 70px;
+			margin-bottom: 30px;
+
+		}
+
+	}
+
+
+
 }
