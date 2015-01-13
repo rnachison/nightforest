@@ -16,6 +16,8 @@ $blockier: 'Marck Script', cursive;
 	background-size: cover;
 	background-repeat: no-repeat;
 
+
+
 	// div around headline
 	#sky_head {
 
@@ -106,6 +108,11 @@ $blockier: 'Marck Script', cursive;
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	svg:not(:root) {
+
+    	overflow: visible;
+    		
+	}
 
 
 	#earth {

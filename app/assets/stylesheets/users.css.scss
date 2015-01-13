@@ -27,6 +27,13 @@ $blockier: 'Marck Script', cursive;
 		margin-top: 20%;
 	}
 
+	// provent fairies from disappearing to the right
+	svg:not(:root) {
+
+    	overflow: visible;
+    		
+	}
+
 
 	.choose_realm {
 
