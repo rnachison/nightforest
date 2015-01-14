@@ -45,7 +45,7 @@
 
     	<% if Fairy.exists?(:id => current_user.id) %>
     		<!-- svg window with link capability -->
-    		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="600" width="1000">
+    		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="600" width="1000" overflow="visible">
     			<!-- link to fairy portal (info about realm) -->
         		<a xlink:href="<%= @fairy.portal %>" id="comet_link">
         		<!-- use ellipse tag to avoid conflict with selecting all circles below -->
