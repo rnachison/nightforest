@@ -38,6 +38,12 @@ html {
 			text-decoration: none;
 			font-family: $blockier;
 			font-size: 16px;
+			background-color: rgba(255, 255, 255, .7);
+			text-align: center;
+			padding: 10px 10px 20px 10px;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border: 0px;
 
 		}
 
@@ -49,11 +55,6 @@ html {
 
 		.right_links {
 
-			background-color: rgba(255, 255, 255, .7);
-			text-align: center;
-			padding: 10px 10px 20px 10px;
-			border-bottom-left-radius: 20px;
-			border-bottom-right-radius: 20px;
 			display: inline-block;
 
 		}
@@ -61,6 +62,8 @@ html {
 		.right_links:hover {
 
 			background-color: white;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
 
 		}
 
@@ -78,21 +81,24 @@ html {
 			text-decoration: none;
 			font-family: $blockier;
 			font-size: 16px;
+			background-color: rgba(255, 255, 255, .7);
+			text-align: center;
+			padding: 10px 10px 20px 10px;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border: 0px;
 
 		}
 
 		.path_links:active {
 
 			color: rgb(232, 12, 122);
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
 		}
 
 		.left_links {
 
-			background-color: rgba(255, 255, 255, .7);
-			text-align: center;
-			padding: 10px 10px 20px 10px;
-			border-bottom-left-radius: 20px;
-			border-bottom-right-radius: 20px;
 			display: inline-block;
 
 		}
@@ -100,6 +106,8 @@ html {
 		.left_links:hover {
 
 			background-color: white;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
 		}
 
 	}
