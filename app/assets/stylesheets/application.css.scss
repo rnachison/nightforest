@@ -53,19 +53,19 @@ html {
 
 		}
 
+		.user_links:hover {
+
+			background-color: white;
+
+
+		}
+
 		.right_links {
 
 			display: inline-block;
 
 		}
 
-		.right_links:hover {
-
-			background-color: white;
-			border-bottom-left-radius: 20px;
-			border-bottom-right-radius: 20px;
-
-		}
 
 	}
 
@@ -90,24 +90,22 @@ html {
 
 		}
 
+		.path_links:hover {
+
+			background-color: white;
+
+		}
+
 		.path_links:active {
 
 			color: rgb(232, 12, 122);
-			border-bottom-left-radius: 20px;
-			border-bottom-right-radius: 20px;
+
 		}
 
 		.left_links {
 
 			display: inline-block;
 
-		}
-
-		.left_links:hover {
-
-			background-color: white;
-			border-bottom-left-radius: 20px;
-			border-bottom-right-radius: 20px;
 		}
 
 	}

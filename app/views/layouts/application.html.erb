@@ -16,32 +16,32 @@
 			<div id="user_header">
         		<% if current_user %>
                     <div class="right_links">
-                	   <%= button_to(current_user, html_options = {class: "user_links", method: "get"}) do %>
-                            <%= current_user.username %>'s page
+                	   <%= link_to(current_user) do %>
+                            <button type='button' class='user_links'><%= current_user.username %>'s page</button>
                 	   <% end %>
                     </div>
                     <div class="right_links">
-                        <%= button_to "log out", logout_path, :class => "user_links", :method => "get" %>
+                        <%= link_to "<button type='button' class='user_links'>log out</button>".html_safe, logout_path %>
                     </div>
 			    <% else %>
                     <div class="right_links">
-                        <%= button_to "sign up", signup_path, :class => "user_links", :method => "get" %>
+                        <%= link_to "<button type='button' class='user_links'>sign up</button>".html_safe, signup_path %>
                     </div>
                     <div class="right_links"> 
-                        <%= button_to "log in", login_path, :class => "user_links", :method => "get" %>
+                        <%= link_to "<button type='button' class='user_links'>log in</button>".html_safe, login_path %>
                     </div>
 			    <% end %>
 			</div>
 
         <div id="path_header">
             <div class="left_links">
-                <%= button_to "forest", root_path, :class => "path_links", :method => "get" %>
+                <%= link_to "<button type='button' class='path_links'>forest</button>".html_safe, root_path %>
             </div>
             <div class="left_links"> 
-                <%= button_to "night sky", sky_path, :class => "path_links", :method => "get" %>
+                <%= link_to "<button type='button' class='path_links'>night sky</button>".html_safe, sky_path %>
             </div>
             <div class="left_links"> 
-                <%= button_to "info", about_path, :class => "path_links", :method => "get" %>
+                <%= link_to "<button type='button' class='path_links'>info</button>".html_safe, about_path %>
             </div>
         </div>
 
