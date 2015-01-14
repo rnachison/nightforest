@@ -28,11 +28,11 @@ $blockier: 'Marck Script', cursive;
 	}
 
 	// prevent fairies from disappearing to the right
-	// svg:not(:root) {
+	svg:not(:root) {
 
- //    	overflow: visible;
+    	overflow: visible;
     		
-	// }
+	}
 
 
 	.choose_realm {
