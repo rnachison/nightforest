@@ -109,7 +109,7 @@ $blockier: 'Marck Script', cursive;
 	background-repeat: no-repeat;
 
 	// prevent exoplanets from cutting off
-	svg:not(:root) {
+	svg {
 
     	overflow: visible;
     		

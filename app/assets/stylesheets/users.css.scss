@@ -28,7 +28,7 @@ $blockier: 'Marck Script', cursive;
 	}
 
 	// prevent fairies from disappearing to the right
-	svg:not(:root) {
+	svg {
 
     	overflow: visible;
     		
