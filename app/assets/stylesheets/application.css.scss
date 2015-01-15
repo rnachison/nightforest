@@ -82,11 +82,11 @@ html {
 		
 			.path_links {
 
-				color: yellow;
+				color: $top;
 				text-decoration: none;
 				font-family: $blockier;
 				font-size: 16px;
-				background-color: yellow;
+				background-color: rgba(255, 255, 255, .7);
 				text-align: center;
 				padding: 10px 10px 20px 10px;
 				border-bottom-left-radius: 20px;
