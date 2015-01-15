@@ -69,7 +69,7 @@ html {
 
 	}
 
-		#path_header {
+	#path_header {
 
 		position: fixed;
 		top: 0px;
@@ -82,7 +82,10 @@ html {
 		
 			.path_links {
 
-
+				color: $top;
+				text-decoration: none;
+				font-family: $blockier;
+				font-size: 16px;
 				background-color: yellow;
 				text-align: center;
 				padding: 10px 10px 20px 10px;
@@ -98,16 +101,8 @@ html {
 
 			}
 
-			.path_links_text {
 
-				color: $top;
-				text-decoration: none;
-				font-family: $blockier;
-				font-size: 16px;
-
-			}
-
-			.path_links_text:active {
+			.path_links:active {
 
 				color: rgb(232, 12, 122);
 
