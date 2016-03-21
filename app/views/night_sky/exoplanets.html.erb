@@ -51,6 +51,11 @@
         // console.log(planetNum);
 
 
+        // clear svg
+        if (d3.selectAll('svg')) {
+            d3.selectAll('svg').selectAll('*').remove();
+            d3.selectAll('svg').remove();
+        }
 
         // create variable svg = svg
         var svg = d3.select('svg');

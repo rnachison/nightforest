@@ -12,6 +12,12 @@
         var width = 1500,
             height = 650;
 
+        // clear svg
+        if (d3.selectAll('svg')) {
+            d3.selectAll('svg').selectAll('*').remove();
+            d3.selectAll('svg').remove();
+        }
+
         // create empty array for radii
         var dataset = [];
         // push a radius for each asteroid
