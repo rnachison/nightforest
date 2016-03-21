@@ -50,14 +50,13 @@
 
         // create variable svg = svg
         var svg = d3.select('#exoplanets').append('svg')
-            .attr('height', '800px')
-            .attr('width', '1440px');
+            .attr('height', '100%')
+            .attr('width', '100%');
 
-        var ellipse = svg.append('ellipse')
+        svg.append('circle')
             .attr('cx', '700px')
             .attr('cy', '712px')
-            .attr('rx', '1px')
-            .attr('ry', '1px')
+            .attr('r', '1px')
             .style('fill', '#fff')
             .style('stroke', '#fff')
             .style('stroke-width', '2px');

@@ -112,18 +112,17 @@ $blockier: 'Marck Script', cursive;
 	svg {
 
     	overflow: visible;
+
+    	#earth {
+
+			font-family: $blockier;
+			color: white;
+			position: absolute;
+			top: 720px;
+			left: 678px;
+			font-size: 20px;
+		}
     		
-	}
-
-
-	#earth {
-
-		font-family: $blockier;
-		color: white;
-		position: absolute;
-		top: 720px;
-		left: 678px;
-		font-size: 20px;
 	}
 
 
