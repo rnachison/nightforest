@@ -1,8 +1,5 @@
 <body id="asteroids">
 
-    <svg height="650" width="1500">
-    </svg>
-
     <h1 id="mimic">Fireflies Mimic Asteroids in Size and Luminosity</h1>
 
 <script type="text/javascript">
@@ -55,7 +52,9 @@
             .start();
 
         // select the svg window
-        var svg = d3.select("svg");
+        var svg = d3.select("#asteroids").insert("svg", ":first-child")
+            .attr('height', height)
+            .attr('width', width);
 
         // select all circles
         svg.selectAll("circle")
