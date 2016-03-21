@@ -1,5 +1,6 @@
 <body id="exoplanets">
 
+<p id='earth'>Earth</p>
 
     <script type="text/javascript">
 
@@ -49,7 +50,7 @@
         }
 
         // create variable svg = svg
-        var svg = d3.select('#exoplanets').append('svg')
+        var svg = d3.select('#exoplanets').insert('svg', ':first-child')
             .attr('height', '100%')
             .attr('width', '100%');
 
@@ -60,10 +61,6 @@
             .style('fill', '#fff')
             .style('stroke', '#fff')
             .style('stroke-width', '2px');
-
-        svg.append('text')
-            .attr('id', 'earth')
-            .text('Earth');
 
 
         svg.selectAll("circle").data(radii)
