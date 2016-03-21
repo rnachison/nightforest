@@ -16,6 +16,16 @@
             d3.selectAll('svg').selectAll('*').remove();
         }
 
+        if (d3.select('#asteroids-svg')) {
+            d3.select('#asteroids-svg').remove();
+        }
+
+        // select the svg window
+        var svg = d3.select("#asteroids").insert("svg", ":first-child")
+            .attr('id', 'asteroids-svg')
+            .attr('height', height)
+            .attr('width', width);
+
         // create empty array for radii
         var dataset = [];
         // push a radius for each asteroid
@@ -53,10 +63,6 @@
             // fire force
             .start();
 
-        // select the svg window
-        var svg = d3.select("#asteroids").insert("svg", ":first-child")
-            .attr('height', height)
-            .attr('width', width);
 
         // select all circles
         svg.selectAll("circle")

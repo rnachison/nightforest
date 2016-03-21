@@ -7,7 +7,10 @@
         // clear svg
         if (d3.selectAll('svg')) {
             d3.selectAll('svg').selectAll('*').remove();
-            d3.selectAll('svg').remove();
+        }
+
+        if (d3.select('#exo-svg')) {
+            d3.select('#exo-svg').remove();
         }
     	
         // create empty array radii
@@ -36,7 +39,7 @@
             year.push(Math.abs(<%= x['PER'] %>) * 1000);
         <% end %>
 
-        console.log(year);
+        // console.log(year);
 
         // Make an array of indices to assign to planet ids
         var planetNum = [];
@@ -49,13 +52,15 @@
 
         // create variable svg = svg
         var svg = d3.select('#exoplanets').insert('svg', ':first-child')
+            .attr('id', 'exo-svg')
             .attr('height', '100%')
             .attr('width', '100%');
 
-        svg.append('circle')
+        svg.append('ellipse')
             .attr('cx', '700px')
             .attr('cy', '712px')
-            .attr('r', '1px')
+            .attr('rx', '1px')
+            .attr('ry', '1px')
             .style('fill', '#fff')
             .style('stroke', '#fff')
             .style('stroke-width', '2px');
