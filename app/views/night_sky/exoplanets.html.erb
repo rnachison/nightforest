@@ -66,12 +66,17 @@
             .style('stroke-width', '2px');
 
 
-        svg.selectAll("circle").data(radii)
+        svg.selectAll("ellipse").data(radii)
 
-        .enter().append("circle")
+        .enter().append("ellipse")
 
             // assign radius to radii
-            .attr("r", function(d) {
+            .attr("rx", function(d) {
+                return d;
+            })
+
+            // assign radius to radii
+            .attr("ry", function(d) {
                 return d;
             })
 
