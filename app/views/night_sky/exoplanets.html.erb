@@ -45,12 +45,13 @@
         // clear svg
         if (d3.selectAll('svg')) {
             d3.selectAll('svg').selectAll('*').remove();
+            d3.selectAll('svg').remove();
         }
 
         // create variable svg = svg
         var svg = d3.select('#exoplanets').append('svg')
             .attr('height', '800px')
-            .width('width', '1440px');
+            .attr('width', '1440px');
 
         var ellipse = svg.append('ellipse')
             .attr('cx', '700px')
