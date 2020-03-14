@@ -6,7 +6,6 @@ $blockier: 'Marck Script', cursive;
 // Style root page
 #floor {
 
-	height: 100%;
 	width: 100%;
 	background-image: url(image_path('Yakushima_Forest.jpg'));
 	background-size: cover;
@@ -53,7 +52,7 @@ $blockier: 'Marck Script', cursive;
 				border: 1px solid $moss;
 				margin: 0px auto;
 				padding: 5px 30px;
-				
+
 			}
 
 			.call_button:hover {
@@ -105,5 +104,5 @@ $blockier: 'Marck Script', cursive;
     	margin: 0px auto;
 
     }
-    
+
 }

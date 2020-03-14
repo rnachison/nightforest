@@ -3,13 +3,13 @@
     <h1 id="mimic">Fireflies Mimic Asteroids in Size and Luminosity</h1>
 
 <script type="text/javascript">
-	
+
 
         // size of d3 window
         var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-        height = height - 140;
+        height = height - document.getElementById('mimic').offsetHeight - 20;
 
         // clear svg
         if (d3.selectAll('svg')) {
@@ -90,7 +90,7 @@
             .attr("cy", function(d) { return d.y; });
         });
 
-        // on mousemove 
+        // on mousemove
         svg.on("mousemove", function() {
             // mouse position array
             var p1 = d3.mouse(this);

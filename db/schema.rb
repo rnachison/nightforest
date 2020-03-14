@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150114190552) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "fairies", force: true do |t|
+  create_table "fairies", force: :cascade do |t|
     t.string  "realm"
     t.integer "user_id"
     t.string  "portal"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150114190552) do
 
   add_index "fairies", ["user_id"], name: "index_user_id", using: :btree
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
     t.integer  "user_id"
